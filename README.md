@@ -54,7 +54,6 @@ The following tools were used in this project:
 * **FreeBayes** — variant calling
 * **bcftools** — filtering, normalization, and inspection of VCF files
 * **SnpEff** — functional annotation of detected variants
-* **IGV** *(optional, if used)* — manual visualization of alignment and variant positions
 
 ---
 
