@@ -100,7 +100,6 @@ This workflow generated several main output files:
 * `variants_annotated.vcf`
 * `snpEff_summary.html`
 * `snpEff_summary.genes.txt`
-* `variant_report.tsv` *(if exported as a custom summary table)*
 
 ---
 
