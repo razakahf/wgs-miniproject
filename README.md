@@ -242,12 +242,7 @@ Normalize:
 ```bash
 bcftools norm -f reference.fna variants_filtered.vcf -o variants_norm.vcf
 ```
-
-### 8. Rename chromosome names if needed
-
-If the chromosome name in the VCF does not match the chromosome name expected by SnpEff, rename the `CHROM` field before annotation.
-
-### 9. Annotate variants with SnpEff
+### 8. Annotate variants with SnpEff
 
 ```bash
 snpEff ann \
@@ -255,21 +250,9 @@ snpEff ann \
   <snpeff_database_name> \
   variants_norm_renamed.vcf > variants_annotated.vcf
 ```
-
-### 10. Summarize annotated variants
+### 9. Summarize annotated variants
 
 Extract relevant annotation fields (gene, effect, impact, codon change, amino acid change) into a tabular report for easier interpretation.
-
----
-
-## Example Downstream Questions
-
-This project can be extended to investigate questions such as:
-
-* Which genes contain **missense**, **frameshift**, or **stop-gained** variants?
-* Are any detected variants located in genes associated with **antimicrobial resistance**, **virulence**, or **stress adaptation**?
-* How does the variant profile differ across isolates from **animal**, **food**, and **environmental** sources?
-* Can comparative analysis across multiple public isolates reveal common mutation patterns in poultry-associated *Salmonella*?
 
 ---
 
