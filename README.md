@@ -1,5 +1,5 @@
 # Mini Project: Public Data Analysis of *Salmonella enterica* subsp. *enterica* serovar Typhimurium Using Whole-Genome Sequencing
-
+ 
 ## Project Overview
 
 This mini project was developed as part of a beginner bioinformatics learning portfolio to explore how whole-genome sequencing (WGS) data can be used to analyze genomic variation in a zoonotic foodborne pathogen.
