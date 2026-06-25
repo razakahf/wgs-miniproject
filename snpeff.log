@@ -1,0 +1,10 @@
+java.lang.RuntimeException: Property: 'Salmonella_typhimurium.genome' not found in config file '/home/alfirdarzh/miniconda3/envs/wgs/share/snpeff-5.4.0c-0/snpEff.config'
+	at org.snpeff.interval.Genome.<init>(Genome.java:102)
+	at org.snpeff.snpEffect.Config.readConfig(Config.java:825)
+	at org.snpeff.snpEffect.Config.init(Config.java:600)
+	at org.snpeff.snpEffect.Config.<init>(Config.java:130)
+	at org.snpeff.SnpEff.loadConfig(SnpEff.java:451)
+	at org.snpeff.snpEffect.commandLine.SnpEffCmdEff.run(SnpEffCmdEff.java:858)
+	at org.snpeff.snpEffect.commandLine.SnpEffCmdEff.run(SnpEffCmdEff.java:844)
+	at org.snpeff.SnpEff.run(SnpEff.java:1175)
+	at org.snpeff.SnpEff.main(SnpEff.java:164)

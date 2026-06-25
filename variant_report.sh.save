@@ -1,0 +1,33 @@
+#!/bin/bash
+
+VCF="variants_annotated.vcf"
+OUT="variant_report.tsv"
+
+echo -e "CHROM\tPOS\tREF\tALT\tGENE\tEFFECT\tIMPACT\tAA_CHANGE\tCODON_CHANGE" > $OUT
+
+grep -v "^#" $VCF | while read line
+do
+    CHROM=$(echo "$line" | cut -f1)
+    POS=$(echo "$line" | cut -f2)
+    REF=$(echo "$line" | cut -f4)
+    ALT=$(echo "$line" | cut -f5)
+
+    ANN=$(echo "$line" | grep -o "ANN=[^;]*" | sed 's/ANN=//')
+
+    FIRST=$(echo "$ANN" | cut -d',' -f1)
+
+    EFFECT=$(echo "$FIRST" | cut -d'|' -f2)
+    IMPACT=$(echo "$FIRST" | cut -d'|' -f3)
+    GENE=$(echo "$FIRST" | cut -d'|' -f4)
+
+    CODON=$(echo "$FIRST" | cut -d'|' -f10)
+    AA=$(echo "$FIRST" | cut -d'|' -f11)
+
+    echo -e "${CHROM}\t${POS}\t${REF}\t${ALT}\t${GENE}\t${EFFECT}\t${IMPACT}\t${AA}\t${CODON}"
+done >> $OUT
+
+echo "Report saved as $OUT"
+chmod +x variant_report.sh
+./variant_report.sh
+^X
+
