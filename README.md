@@ -138,8 +138,7 @@ The reference genome used, ****Salmonella enterica* subsp. *enterica* serovar Ty
 
 Therefore, the results presented here should be interpreted as an **exploratory overview of genomic variation**, rather than definitive evidence of specific causal mutations.
 
-```
-
+---
 ## Disclaimer
 
 This repository is intended as a **learning portfolio / mini project** for practicing WGS-based bacterial variant analysis using public sequencing data. The biological interpretation of the findings should not be considered clinical or diagnostic evidence without additional validation.
